@@ -64,7 +64,7 @@ line-height: 20px;
   font-weight: bold;
   color: #77628c;
   display: flex;
-  margin: 20px;
+  
 }
 
 strong {
@@ -72,21 +72,22 @@ strong {
 }
 
 .weather-icon {
-font-size: 50px;
-margin-right: 10px;
-line-height: 70px;
+width: 100px;
+height: 100px;
 }
 
 .current-temperature {
     font-size: 100px;
     font-weight: lighter;
     line-height: 55px;
+    margin-top: 20px;
 }
 
 .temperature-metric {
     font-size: 28px;
     margin: 0;
     line-height: 10px;
+    margin-top: 20px;
 }
 
 footer {

@@ -1,6 +1,7 @@
 function refreshWeather(response) {
-  let temperatureElement = document.querySelector("#temperature");
+    let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -9,11 +10,12 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(temperature);
+  cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}Km/h`;
   timeElement.innerHTML = formatDate(date);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" weather-icon`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 }
 
 function formatDate(date) {
@@ -35,10 +37,11 @@ function searchCity(city) {
 function handleCitySearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchInput.value;
+  
   searchCity(searchInput.value);
 }
 
 let submitSearchElement = document.querySelector("#city-search");
 submitSearchElement.addEventListener("submit", handleCitySearch);
+
+searchCity("Medellin");
