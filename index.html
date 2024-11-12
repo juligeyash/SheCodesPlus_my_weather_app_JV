@@ -11,21 +11,26 @@
 </head>
   <body>
     <div class="weather-app">
-    <heather>
-      <form>
-        <input type="text" placeholder="Enter a city" />
-        <input type="submit" value="search" />
+    <header>
+      <form class="city-search">
+        <input type="text" placeholder="Enter a city" required class="search-form-input"/>
+        <input type="submit" value="Search" search class="search-form-button"/>
       </form>
-    </heather>
+    </header>
     <main>
-      <div><h1>Chicago</h1>
-        <p>🌅 12 &#8451 </p>
-     </div>
-     <div>
-      <p>Monday, 11 Nov 2024; cloudy</p>
-      <p>Humidity: XX; Wind: XX</p><hr />
+        <div class = "city-overall-weather">
+     <div class = "city-weather-details">
+        <h1 class="city-searched">Chicago</h1>
+      <p class="city-details">Monday, 11 Nov 2024; cloudy<br>
+         Humidity: <strong>XX;</strong> Wind: <strong>XX</strong></p>
       </div>
-      <div>
+      <div class="city-current-weather">
+        <div class="weather-icon">🌅 </div>
+        <div class="current-temperature">12 </div> 
+        <div class="temperature-metric">&#8451</div>
+      </div>
+      </div>
+      <div class="forecast-weather">
         <h2>This week's forecast</h2>
         <li>
             Tuesday
@@ -33,18 +38,17 @@
             Thursday
             Friday
             Saturday
-            Sunday<hr>
+            Sunday
         </li>
       </div>
     </main>
     <footer>
-      Coded with love by Juli Valencia, code is open source on
-      <a href="https://github.com/juligeyash" target="_blank">GitHub</a> and
-      website hosted on
-      <a
+      Coded with love by Juli Valencia, code is 
+      <a href="https://github.com/juligeyash" target="_blank"> open source on GitHub</a> and
+            <a
         href="https://app.netlify.com/sites/jvshecodesplusproject/overview"
         target="_blank"
-        >Netlify</a
+        >website hosted on Netlify</a
       >
     </footer>
     </div>
